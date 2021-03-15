@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Problems/A capital letter or a digit" />
+            <option value="$PROJECT_DIR$/Problems/Arithmetic expression" />
+            <option value="$PROJECT_DIR$/Problems/Car" />
+            <option value="$PROJECT_DIR$/Problems/Check a number is positive" />
+            <option value="$PROJECT_DIR$/Problems/Check the value" />
+            <option value="$PROJECT_DIR$/Problems/Comment some lines" />
+            <option value="$PROJECT_DIR$/Problems/Comparing numbers and characters" />
+            <option value="$PROJECT_DIR$/Problems/Counting positive numbers" />
+            <option value="$PROJECT_DIR$/Problems/Divide nuts equally between squirrels" />
+            <option value="$PROJECT_DIR$/Problems/Division" />
+            <option value="$PROJECT_DIR$/Problems/Evaluate an expression" />
+            <option value="$PROJECT_DIR$/Problems/Exactly one parameter is positive" />
+            <option value="$PROJECT_DIR$/Problems/Exchange" />
+            <option value="$PROJECT_DIR$/Problems/FTN-Numbers" />
+            <option value="$PROJECT_DIR$/Problems/Find X" />
+            <option value="$PROJECT_DIR$/Problems/Find the first occurrence of the word &quot;the&quot;" />
+            <option value="$PROJECT_DIR$/Problems/Fix me" />
+            <option value="$PROJECT_DIR$/Problems/Fizz Buzz" />
+            <option value="$PROJECT_DIR$/Problems/Floor-space of the room" />
+            <option value="$PROJECT_DIR$/Problems/Good rest on vacation" />
+            <option value="$PROJECT_DIR$/Problems/Gratuity" />
+            <option value="$PROJECT_DIR$/Problems/House inheritance" />
+            <option value="$PROJECT_DIR$/Problems/How many nuts will be left after division" />
+            <option value="$PROJECT_DIR$/Problems/Initializing an array of characters" />
+            <option value="$PROJECT_DIR$/Problems/Invitations and gifts" />
+            <option value="$PROJECT_DIR$/Problems/Just checking" />
+            <option value="$PROJECT_DIR$/Problems/Knights" />
+            <option value="$PROJECT_DIR$/Problems/Knights, merchants, and robbers" />
+            <option value="$PROJECT_DIR$/Problems/Manager" />
+            <option value="$PROJECT_DIR$/Problems/Maximum element divisible by 4" />
+            <option value="$PROJECT_DIR$/Problems/Number dividers" />
+            <option value="$PROJECT_DIR$/Problems/Palindrome" />
+            <option value="$PROJECT_DIR$/Problems/Parse url" />
+            <option value="$PROJECT_DIR$/Problems/Perimeter" />
+            <option value="$PROJECT_DIR$/Problems/Positive, Negative or Zero" />
+            <option value="$PROJECT_DIR$/Problems/Previous character" />
+            <option value="$PROJECT_DIR$/Problems/Print two numbers on the same line" />
+            <option value="$PROJECT_DIR$/Problems/Pseudo-constructor" />
+            <option value="$PROJECT_DIR$/Problems/Reversed output" />
+            <option value="$PROJECT_DIR$/Problems/Summation" />
+            <option value="$PROJECT_DIR$/Problems/The countdown" />
+            <option value="$PROJECT_DIR$/Problems/The length of the sequence" />
+            <option value="$PROJECT_DIR$/Problems/The max of three numbers" />
+            <option value="$PROJECT_DIR$/Problems/The maximum pairwise product" />
+            <option value="$PROJECT_DIR$/Problems/The number of digits" />
+            <option value="$PROJECT_DIR$/Problems/The number of tens" />
+            <option value="$PROJECT_DIR$/Problems/The sum of digits" />
+            <option value="$PROJECT_DIR$/Problems/The sum of elements" />
+            <option value="$PROJECT_DIR$/Problems/The sum of three numbers" />
+            <option value="$PROJECT_DIR$/Problems/URL" />
+            <option value="$PROJECT_DIR$/Problems/Within a range" />
+            <option value="$PROJECT_DIR$/Sorting Tool/task" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
