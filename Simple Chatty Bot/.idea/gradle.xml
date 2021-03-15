@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Problems/Amount on account" />
+            <option value="$PROJECT_DIR$/Problems/Are the numbers different?" />
+            <option value="$PROJECT_DIR$/Problems/Area of a circle" />
+            <option value="$PROJECT_DIR$/Problems/Assignments" />
+            <option value="$PROJECT_DIR$/Problems/Balance checker" />
+            <option value="$PROJECT_DIR$/Problems/Between two numbers" />
+            <option value="$PROJECT_DIR$/Problems/Boxes" />
+            <option value="$PROJECT_DIR$/Problems/Check the value" />
+            <option value="$PROJECT_DIR$/Problems/Collatz conjecture" />
+            <option value="$PROJECT_DIR$/Problems/Compare Latin letters" />
+            <option value="$PROJECT_DIR$/Problems/Comparing sums" />
+            <option value="$PROJECT_DIR$/Problems/Date and time formatting" />
+            <option value="$PROJECT_DIR$/Problems/Difference of times" />
+            <option value="$PROJECT_DIR$/Problems/Digits or not" />
+            <option value="$PROJECT_DIR$/Problems/Distance" />
+            <option value="$PROJECT_DIR$/Problems/Evaluate an expression" />
+            <option value="$PROJECT_DIR$/Problems/First, second, third" />
+            <option value="$PROJECT_DIR$/Problems/Fix declarations" />
+            <option value="$PROJECT_DIR$/Problems/From 0 to 9" />
+            <option value="$PROJECT_DIR$/Problems/Get last digit" />
+            <option value="$PROJECT_DIR$/Problems/Grades" />
+            <option value="$PROJECT_DIR$/Problems/Groundhogs at the party" />
+            <option value="$PROJECT_DIR$/Problems/Hello, Kotlin" />
+            <option value="$PROJECT_DIR$/Problems/I like Kotlin" />
+            <option value="$PROJECT_DIR$/Problems/Job" />
+            <option value="$PROJECT_DIR$/Problems/Kotlin x5" />
+            <option value="$PROJECT_DIR$/Problems/Leap year" />
+            <option value="$PROJECT_DIR$/Problems/Max values of integer types" />
+            <option value="$PROJECT_DIR$/Problems/N-th symbol" />
+            <option value="$PROJECT_DIR$/Problems/National assembly" />
+            <option value="$PROJECT_DIR$/Problems/Number squared" />
+            <option value="$PROJECT_DIR$/Problems/Read and print" />
+            <option value="$PROJECT_DIR$/Problems/Reversing a number" />
+            <option value="$PROJECT_DIR$/Problems/Right equation" />
+            <option value="$PROJECT_DIR$/Problems/Sequence" />
+            <option value="$PROJECT_DIR$/Problems/Size of parts" />
+            <option value="$PROJECT_DIR$/Problems/Size, min and max" />
+            <option value="$PROJECT_DIR$/Problems/Swap" />
+            <option value="$PROJECT_DIR$/Problems/The Hello World program" />
+            <option value="$PROJECT_DIR$/Problems/The eternal truth" />
+            <option value="$PROJECT_DIR$/Problems/The information about a person" />
+            <option value="$PROJECT_DIR$/Problems/The largest element" />
+            <option value="$PROJECT_DIR$/Problems/The longest sequence" />
+            <option value="$PROJECT_DIR$/Problems/The max of two numbers without else-branch" />
+            <option value="$PROJECT_DIR$/Problems/The number of tens" />
+            <option value="$PROJECT_DIR$/Problems/The result of a game in Tic-Tac-Toe" />
+            <option value="$PROJECT_DIR$/Problems/The roots of equation" />
+            <option value="$PROJECT_DIR$/Problems/The sum of N numbers" />
+            <option value="$PROJECT_DIR$/Problems/Very Big Number" />
+            <option value="$PROJECT_DIR$/Problems/We need to learn Kotlin" />
+            <option value="$PROJECT_DIR$/Problems/Within both ranges" />
+            <option value="$PROJECT_DIR$/Problems/Your name" />
+            <option value="$PROJECT_DIR$/Problems/val or var?" />
+            <option value="$PROJECT_DIR$/Simple Chatty Bot/task" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
