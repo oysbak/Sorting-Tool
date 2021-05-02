@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/353193/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Mon, 15 Mar 2021 17:46:27 UTC
+update_date: Sun, 02 May 2021 10:20:36 UTC
 stages:
 - id: 574
   step: 9623
@@ -19,14 +19,16 @@ stages:
   is_completed: true
 - id: 578
   step: 9627
-  is_completed: false
+  is_completed: true
 - id: 579
   step: 9628
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: Modulo division
     theory_id: 10586
+  - title: Modulo division with negative numbers
+    theory_id: 12791
   - title: Units of information
     theory_id: 6865
   - title: IDE
@@ -65,7 +67,7 @@ topics:
     theory_id: 4472
   - title: Increment and decrement
     theory_id: 10776
-  - title: Type inference
+  - title: Type of the numeric expression
     theory_id: 9506
   - title: Integers in action
     theory_id: 4488
@@ -73,7 +75,7 @@ topics:
     theory_id: 4525
   - title: Characters
     theory_id: 4680
-  - title: Strings
+  - title: Working with strings
     theory_id: 12561
   - title: Ranges
     theory_id: 4633
@@ -90,10 +92,6 @@ topics:
   1:
   - title: Introduction to operating systems
     theory_id: 9704
-  - title: Command line overview
-    theory_id: 8977
-  - title: Parameters and options
-    theory_id: 9746
   - title: Comments
     theory_id: 4406
   - title: Coding style conventions
@@ -102,22 +100,18 @@ topics:
     theory_id: 4389
   - title: Objects
     theory_id: 11233
+  - title: Command line overview
+    theory_id: 8977
+  - title: Parameters and options
+    theory_id: 9746
   - title: Floating-point types
     theory_id: 4502
   - title: Declaring functions
     theory_id: 4580
-  - title: Getting substrings
-    theory_id: 8535
   - title: Equality
     theory_id: 11236
   - title: Arrays
     theory_id: 4564
-  - title: String arrays
-    theory_id: 11477
-  - title: For loop and arrays
-    theory_id: 4657
-  - title: Processing strings
-    theory_id: 9027
   - title: The main() function
     theory_id: 10484
   - title: IntelliJ Run Configurations
@@ -125,8 +119,6 @@ topics:
   2:
   - title: Computer algorithms
     theory_id: 4953
-  - title: Introducing the first algorithm
-    theory_id: 10336
   - title: The big O notation
     theory_id: 4991
   - title: Divide and conquer
@@ -137,6 +129,10 @@ topics:
     theory_id: 4964
   - title: Recursion basics
     theory_id: 5984
+  - title: String arrays
+    theory_id: 11477
+  - title: For loop and arrays
+    theory_id: 4657
   - title: Introduction to collections
     theory_id: 10390
   - title: List

@@ -6,10 +6,6 @@
 
 <p>The result of sorting by count should be pairs <code class="java">(count, dataEntry)</code> sorted by the <code class="java">count</code> value.</p>
 
-<p>You can sort using the <code class="java">String.compareTo(String)</code> method or using <a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-java.util.Comparator-" rel="noopener noreferrer nofollow">the comparator</a>.</p>
-
-<p>To store the input data, you can use <code class="java">MutableMap</code> and <code class="java">MutableList</code>. </p>
-
 <p>Note that from this stage on, your program focuses on sorting user data, so it will no longer output information about the greatest number or the longest string.</p>
 
 <h2 style="text-align: center;">Objectives</h2>
@@ -22,6 +18,8 @@
 </ul>
 
 <p>Implement natural sorting for words and lines, and sorting by count for all data types. Within the group, elements with equal count values should be sorted naturally.</p>
+
+<p><strong>Note</strong>: for strings (words and lines), natural order is lexicographic order, for numbers it is numeric order.</p>
 
 <p>Print the line containing the total number <code class="java">m</code> of elements in the input: <code class="java">Total ELEMENTS: m.</code>, where <code class="java">ELEMENTS</code>  can be <code class="java">numbers</code>, <code class="java">words</code>, or <code class="java">lines</code>, depending on the input. Then output the sorting results:</p>
 

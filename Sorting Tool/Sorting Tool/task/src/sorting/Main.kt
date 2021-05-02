@@ -1,44 +1,144 @@
 package sorting
 
-import java.math.RoundingMode
+import java.io.File
 import java.util.*
 import kotlin.math.roundToInt
 
 fun main(args: Array<String>) {
     // write your code here
-    val sortingType = when {
-        args.contains("byCount") -> "byCount"
-        else -> "natural"
+    SortingApp(args).run()
+}
+
+class SortingApp(args: Array<String>) {
+    val args = args
+    var dataType = ""
+    var sortingType = ""
+    var inputFile = ""
+    var outputFile = ""
+    var dataTypeSwitch = false
+    var sortingTypeSwitch = false
+    var inputFileSwitch = false
+    var outputFileSwitch = false
+
+    fun run() {
+        for (arg in args) {
+            when {
+                arg == "-dataType" -> dataTypeSwitch = true
+                arg == "-sortingType" -> sortingTypeSwitch = true
+                arg == "-inputFile" -> inputFileSwitch = true
+                arg == "-outputFile" -> outputFileSwitch = true
+                dataTypeSwitch -> {
+                    dataType = arg
+                    dataTypeSwitch = false
+                }
+                sortingTypeSwitch -> {
+                    sortingType = arg
+                    sortingTypeSwitch = false
+                }
+                inputFileSwitch -> {
+                    inputFile = arg
+                    inputFileSwitch = false
+                }
+                outputFileSwitch -> {
+                    outputFile = arg
+                    outputFileSwitch = false
+                }
+                else -> println("\"$arg\" is not a valid parameter. It will be skipped.")
+            }
+        }
+
+        if (dataTypeSwitch && dataType == "") {
+            println("No data type defined!")
+        }
+
+        if (sortingTypeSwitch && sortingType == "") {
+            println("No sorting type defined!")
+        }
+
+        if (inputFileSwitch && inputFile == "") {
+            println("No input file defined!")
+        }
+
+        if (outputFileSwitch && outputFile == "") {
+            println("No output file defined!")
+        }
+
+        when (dataType) {
+            "long" -> StatisticsNumbers(sortingType, inputFile, outputFile)
+            "word" -> StatisticsWords(sortingType)
+            "line" -> StatisticsLines(sortingType)
+            else -> StatisticsNumbers(sortingType, inputFile, outputFile)
+        }
     }
-    when {
-        args.contains("long") -> StatisticsNumbers(sortingType)
-        args.contains("word") -> StatisticsWords(sortingType)
-        args.contains("line") -> StatisticsLines(sortingType)
+
+}
+
+class StatisticsNumbers(sortingType: String, inputFile: String, val outputFile: String) {
+    val numbers = if (inputFile == "") readNumbers() else readFile(inputFile)
+    val count = numbers.size
+
+    init {
+        when (sortingType) {
+            "byCount" -> sortByCount(numbers)
+            "natural" -> sortNaturally(numbers)
+            else -> sortNaturally(numbers) //errorHandling(sortingType)
+        }
+    }
+
+    fun sortByCount(numbers: List<Int>) {
+        presentln("Total numbers: $count.")
+        val map = numbers.groupingBy { it }.eachCount()
+        for ((key, value) in map.toList().sortedBy { (k, v) -> k }.sortedBy { (k, v) -> v }) {
+            presentln("$key: $value time(s), ${(value * 100 / count.toDouble()).roundToInt()}%")
+        }
+    }
+
+    private fun sortNaturally(numbers: List<Int>) {
+        presentln("Total numbers: $count.")
+        present("Sorted data: ")
+        presentln(numbers.sorted().joinToString("   "))
+    }
+
+    private fun readFile(fileName: String): List<Int> {
+        var input = File(fileName).readText().lines().joinToString(",").replace(" ", ",")
+        while (input.contains(",,")) {
+            input = input.replace(",,", ",")
+        }
+        return input.split(',').map { it.toInt() }
+    }
+
+    private fun readNumbers(): List<Int> {
+        //return listOf(1, -2, 33, 4, 42, 1, 1)
+        val scanner = Scanner(System.`in`)
+        val numbers = mutableListOf<Int>()
+        do {
+            val n = scanner.next()
+            if (n.toIntOrNull() == null) {
+                presentln("\"$n\" is not a long. It will be skipped.")
+            }
+            numbers.add(n.toInt())
+        } while (scanner.hasNext())
+        return numbers
+    }
+
+    fun present(whatToPrint: String) {
+        if (outputFile == "") {
+            print(whatToPrint)
+        } else {
+            java.io.File(outputFile).appendText(whatToPrint)
+        }
+    }
+
+    fun presentln(whatToPrint: String) {
+        if (outputFile == "") {
+            println(whatToPrint)
+        } else {
+            java.io.File(outputFile).appendText("$whatToPrint\n")
+        }
     }
 }
 
-fun pain() {
-    // Testing
-
-    println("- Numbers --------------")
-    StatisticsNumbers("byCount")
-    println("--------------------")
-    StatisticsNumbers("natural")
-
-    println("- Words ----------------")
-    StatisticsWords("byCount")
-    println("--------------------")
-    StatisticsWords("natural")
-    println("--------------------")
-
-    println("- Lines ----------------")
-    StatisticsLines("byCount")
-    println("--------------------")
-    StatisticsLines("natural")
-    println("--------------------")
-}
-
-class StatisticsLines(val sortingType: String) {
+class StatisticsLines(sortingType: String) {
     val lines = readLines()
     val count = lines.size
 
@@ -60,23 +160,20 @@ class StatisticsLines(val sortingType: String) {
 
     private fun sortNaturally(words: List<String>) {
         println("Sorted data: ")
-        println(words.sorted().joinToString("\n", "", ""))
+        println(words.sorted().joinToString("\n  "))
     }
 
     private fun readLines(): List<String> {
-
         val scanner = Scanner(System.`in`)
         val words = mutableListOf<String>()
         do {
             words.add(scanner.nextLine())
         } while (scanner.hasNextLine())
         return words
-
-        //return listOf("1 -2   33 4", "42", "1                 1")
     }
 }
 
-class StatisticsWords(val sortingType: String) {
+class StatisticsWords(sortingType: String) {
     val words = readWords()
     val count = words.size
 
@@ -98,56 +195,15 @@ class StatisticsWords(val sortingType: String) {
 
     private fun sortNaturally(words: List<String>) {
         print("Sorted data: ")
-        println(words.sorted().joinToString(" ", "", ""))
+        println(words.sorted().joinToString("   "))
     }
 
     private fun readWords(): List<String> {
-
         val scanner = Scanner(System.`in`)
         val words = mutableListOf<String>()
         do {
             words.add(scanner.next())
         } while (scanner.hasNext())
         return words
-
-        //return listOf("1", "-2", "33", "4", "42", "1", "1")
-    }
-}
-
-class StatisticsNumbers(val sortingType: String) {
-    val numbers = readNumbers()
-    val count = numbers.size
-
-    init {
-        println("Total numbers: $count.")
-        if (sortingType == "byCount") {
-            sortByCount(numbers)
-        } else {
-            sortNaturally(numbers)
-        }
-    }
-
-    fun sortByCount(numbers: List<Int>) {
-        val map = numbers.groupingBy { it }.eachCount()
-        for ((key, value) in map.toList().sortedBy { (k, v) -> k }.sortedBy { (k, v) -> v }) {
-            println("$key: $value time(s), ${(value * 100 / count.toDouble()).roundToInt()}%")
-        }
-    }
-
-    private fun sortNaturally(numbers: List<Int>) {
-        print("Sorted data: ")
-        println(numbers.sorted().joinToString(" ", "", ""))
-    }
-
-    private fun readNumbers(): List<Int> {
-
-        val scanner = Scanner(System.`in`)
-        val numbers = mutableListOf<Int>()
-        do {
-            numbers.add(scanner.nextInt())
-        } while (scanner.hasNext())
-        return numbers
-
-        //return listOf(1, -2, 33, 4, 42, 1, 1)
     }
 }
